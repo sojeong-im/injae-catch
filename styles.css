@@ -521,6 +521,168 @@ body {
 
 
 /* =============================================
+   SERVICES
+   ============================================= */
+.services { background: var(--color-bg); }
+
+.section-desc {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: -1rem auto 0;
+  line-height: 1.8;
+}
+
+/* Top grid: 2 large cards side by side */
+.svc-grid-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Bottom grid: 3 smaller cards */
+.svc-grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* Base card */
+.svc-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.svc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(78, 205, 196, 0.15);
+  border-color: rgba(78, 205, 196, 0.4);
+}
+
+/* Image wrapper */
+.svc-img-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.svc-card--large .svc-img-wrap { height: 280px; }
+.svc-grid-bottom .svc-card .svc-img-wrap { height: 200px; }
+
+.svc-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+.svc-card:hover .svc-img-wrap img {
+  transform: scale(1.08);
+}
+
+/* Dark gradient overlay on image */
+.svc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 8, 20, 0) 30%,
+    rgba(2, 8, 20, 0.85) 100%
+  );
+  transition: var(--transition);
+}
+.svc-card:hover .svc-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 8, 20, 0.1) 0%,
+    rgba(10, 25, 50, 0.92) 100%
+  );
+}
+
+/* Text content area */
+.svc-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  transform: translateY(0);
+  transition: var(--transition);
+}
+.svc-card:hover .svc-content {
+  transform: translateY(-4px);
+}
+
+/* Category tag */
+.svc-tag {
+  display: inline-block;
+  font-family: var(--font-accent);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: rgba(255, 209, 102, 0.15);
+  border: 1px solid rgba(255, 209, 102, 0.4);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 0.5rem;
+}
+
+.svc-content h3 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.svc-content p {
+  font-size: 0.85rem;
+  color: rgba(232, 244, 248, 0.75);
+  line-height: 1.6;
+  margin-bottom: 0.85rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+.svc-card:hover .svc-content p {
+  max-height: 80px;
+  opacity: 1;
+}
+
+.svc-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s, color 0.2s;
+}
+.svc-card:hover .svc-cta {
+  opacity: 1;
+  transform: translateX(0);
+}
+.svc-cta:hover { color: var(--color-accent); }
+
+/* Smaller cards on bottom: slightly compact text */
+.svc-grid-bottom .svc-content { padding: 1.25rem; }
+.svc-grid-bottom .svc-content h3 { font-size: 1.05rem; }
+
+
+/* =============================================
    SOLUTIONS
    ============================================= */
 .solutions { background: var(--color-bg); }
@@ -1080,6 +1242,7 @@ body {
   .about-grid { grid-template-columns: 1fr; }
   .about-visual { display: none; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .svc-grid-bottom { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -1110,6 +1273,12 @@ body {
   .contact-box { padding: 2rem 1.5rem; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
+  .svc-grid-top { grid-template-columns: 1fr; }
+  .svc-grid-bottom { grid-template-columns: 1fr; }
+  .svc-card--large .svc-img-wrap { height: 220px; }
+  /* Always show description on mobile (no hover) */
+  .svc-content p { max-height: 80px; opacity: 1; }
+  .svc-cta { opacity: 1; transform: translateX(0); }
 }
 
 @media (max-width: 480px) {
