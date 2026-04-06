@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>인재캐치중 | 당신의 천재성을 포착합니다</title>
+  <meta name="description" content="인재캐치중은 AI 데이터 기반의 맞춤형 교육 플랫폼입니다. 당신도 몰랐던 내면의 천재성을 발굴하고, 진짜 성장으로 이어줍니다." />
+  <meta name="keywords" content="인재캐치중, 교육플랫폼, 자기계발, 취업, 창업, AI커리큘럼, 내면진단" />
+  <meta property="og:title" content="인재캐치중 | 당신의 천재성을 포착합니다" />
+  <meta property="og:description" content="AI 데이터 기반 맞춤형 교육 플랫폼. 당신 안의 잠재력을 지금 바로 발견하세요." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ==================== NAV ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="brand-logo" id="brand-logo-link">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="18" stroke="url(#grad1)" stroke-width="2"/>
+            <circle cx="20" cy="20" r="12" stroke="url(#grad1)" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <circle cx="20" cy="20" r="6" stroke="#FFD166" stroke-width="1.5"/>
+            <path d="M20 14 C20 14 23 17 23 20 C23 22.5 21 24 21 24 L21 27 L19 27 L19 24 C19 24 17 22.5 17 20 C17 17 20 14 20 14Z" fill="#FFD166"/>
+            <defs>
+              <linearGradient id="grad1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#4ECDC4"/>
+                <stop offset="100%" stop-color="#6C63FF"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="brand-name">인재캐치중</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" id="nav-about">플랫폼 소개</a></li>
+        <li><a href="#solutions" id="nav-solutions">솔루션</a></li>
+        <li><a href="#journey" id="nav-journey">성장 여정</a></li>
+        <li><a href="#business" id="nav-business">비즈니스</a></li>
+        <li><a href="#contact" id="nav-contact">문의</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary nav-cta" id="nav-cta-btn">무료 체험</a>
+      <button class="hamburger" id="hamburger-btn" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <canvas id="radar-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge" id="hero-badge">
+        <span class="badge-dot"></span>
+        AI 기반 맞춤형 교육 플랫폼
+      </div>
+      <h1 class="hero-title" id="hero-title">
+        당신도 몰랐던<br/>
+        <span class="gradient-text">당신의 천재성</span>,<br/>
+        <span class="catch-anim">인재캐치중</span>이 포착합니다.
+      </h1>
+      <p class="hero-sub" id="hero-sub">
+        단순히 찾는 것에서 끝나지 않습니다.<br/>
+        잠재력을 낚아채서 세상 밖으로 끄집어냅니다.
+      </p>
+      <div class="hero-actions" id="hero-actions">
+        <a href="#contact" class="btn btn-primary btn-lg" id="hero-cta-primary">
+          <span class="btn-icon">🎯</span> 내 잠재력 무료 진단
+        </a>
+        <a href="#solutions" class="btn btn-ghost btn-lg" id="hero-cta-secondary">
+          솔루션 살펴보기 →
+        </a>
+      </div>
+      <div class="hero-stats" id="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-target="2847">0</span>
+          <span class="stat-label">발굴된 천재</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="89">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">진단 정확도</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="94">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">성장 만족도</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>스크롤</span>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="about section-pad" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text" id="about-text">
+          <div class="section-label">CATCH &amp; GROWTH</div>
+          <h2 class="section-title">
+            발굴 → 연결 →<br/>
+            <span class="gradient-text">성장의 사이클</span>
+          </h2>
+          <p class="about-desc">
+            인재캐치중은 '인재를 캐치(발굴)하는 것'에서 끝나지 않습니다.<br/>
+            데이터 기반의 정밀 진단으로 <strong>당신만의 성장 지도</strong>를 그리고,
+            실전 훈련으로 반드시 <strong>실제 성과</strong>로 연결시킵니다.
+          </p>
+          <ul class="about-features" id="about-features">
+            <li class="feature-item">
+              <div class="feature-icon">📡</div>
+              <div>
+                <strong>레이더 포착</strong>
+                <span>일상 속 데이터로 숨겨진 잠재력을 탐지합니다</span>
+              </div>
+            </li>
+            <li class="feature-item">
+              <div class="feature-icon">🪝</div>
+              <div>
+                <strong>기회 연결</strong>
+                <span>맞춤형 커리큘럼으로 성장 기회를 낚아챕니다</span>
+              </div>
+            </li>
+            <li class="feature-item">
+              <div class="feature-icon">🚀</div>
+              <div>
+                <strong>진행 중(Ongoing)</strong>
+                <span>지속적인 코칭으로 성장을 멈추지 않게 합니다</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="about-visual" id="about-visual">
+          <div class="radar-visual">
+            <div class="radar-ring r1"></div>
+            <div class="radar-ring r2"></div>
+            <div class="radar-ring r3"></div>
+            <div class="radar-sweep"></div>
+            <div class="radar-center">
+              <div class="radar-hook">🪝</div>
+            </div>
+            <div class="radar-blip b1"><span>창업형</span></div>
+            <div class="radar-blip b2"><span>리더형</span></div>
+            <div class="radar-blip b3"><span>분석형</span></div>
+            <div class="radar-blip b4"><span>창의형</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOLUTIONS ==================== -->
+  <section class="solutions section-pad" id="solutions">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">3대 핵심 솔루션</div>
+        <h2 class="section-title">
+          나를 발견하고, 훈련하고,<br/>
+          <span class="gradient-text">실전으로 증명합니다</span>
+        </h2>
+      </div>
+      <div class="solutions-grid" id="solutions-grid">
+        
+        <!-- Solution 1 -->
+        <div class="solution-card" id="solution-card-1">
+          <div class="card-number">01</div>
+          <div class="card-icon">📊</div>
+          <div class="card-tag">DATA</div>
+          <h3 class="card-title">마이-캐치 리포트<br/><em>My-Catch Report</em></h3>
+          <p class="card-desc">
+            로드 인터뷰와 밸런스 게임 데이터를 '성장 성향 지표'로 변환합니다.
+            어떤 환경에서 가장 빛나는지, 어떤 실패에서 가장 빠르게 일어서는지를 정밀 진단합니다.
+          </p>
+          <ul class="card-features">
+            <li>🔥 성장 엔진 분석 (독학형 vs 환경형)</li>
+            <li>💪 회복 탄력성 지수 데이터화</li>
+            <li>🎯 핏(Fit) 정밀 진단 리포트</li>
+          </ul>
+          <div class="card-example">
+            <div class="example-tag">진단 예시</div>
+            <p>"당신은 <strong>[냉정한 비판] 환경에서 성과가 20% 향상</strong>되는 '결과 중심적 천재'입니다"</p>
+          </div>
+          <a href="#contact" class="card-cta" id="solution1-cta">진단 받기 →</a>
+        </div>
+
+        <!-- Solution 2 -->
+        <div class="solution-card solution-card--featured" id="solution-card-2">
+          <div class="card-badge">Most Popular</div>
+          <div class="card-number">02</div>
+          <div class="card-icon">🧠</div>
+          <div class="card-tag">TRAINING</div>
+          <h3 class="card-title">메타-캐치 워크숍<br/><em>Meta-Catch Workshop</em></h3>
+          <p class="card-desc">
+            20대가 가장 부족한 '나 자신을 객관적으로 보는 법'을 훈련합니다.
+            AI 편향성 분석과 가치관 서바이벌로 '진짜 나'를 찾아갑니다.
+          </p>
+          <ul class="card-features">
+            <li>📓 생각 기록법 (AI 편향성 탐지)</li>
+            <li>⚖️ 가치관 경매 (50→3 서바이벌)</li>
+            <li>🪞 메타인지 강화 훈련</li>
+          </ul>
+          <div class="card-example">
+            <div class="example-tag">매일 밤 3분</div>
+            <p>오늘 내린 선택의 '이유'를 기록하면 <strong>AI가 당신의 핵심 편향성</strong>을 찾아냅니다</p>
+          </div>
+          <a href="#contact" class="card-cta" id="solution2-cta">워크숍 신청 →</a>
+        </div>
+
+        <!-- Solution 3 -->
+        <div class="solution-card" id="solution-card-3">
+          <div class="card-number">03</div>
+          <div class="card-icon">🏃</div>
+          <div class="card-tag">ACTION</div>
+          <h3 class="card-title">천재발굴단 프로젝트<br/><em>Project 'RUN'</em></h3>
+          <p class="card-desc">
+            이론이 아닌 '발로 뛰는' 경험을 교육으로 승화시킵니다.
+            직접 거리로 나가 사람을 만나고, 의도적으로 실패하며 멘탈을 강화합니다.
+          </p>
+          <ul class="card-features">
+            <li>🎤 로드 인터뷰 실습 (UX 체득)</li>
+            <li>❌ 실패 챌린지 (거절 수집 미션)</li>
+            <li>🏆 실전 성과 발표 데모데이</li>
+          </ul>
+          <div class="card-example">
+            <div class="example-tag">챌린지 미션</div>
+            <p>일부러 거절당하기, 일부러 실패하기… <strong>'작은 실패'를 수집</strong>하여 멘탈을 강화합니다</p>
+          </div>
+          <a href="#contact" class="card-cta" id="solution3-cta">프로젝트 참여 →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== JOURNEY ==================== -->
+  <section class="journey section-pad" id="journey">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">USER JOURNEY</div>
+        <h2 class="section-title">
+          거리에서 시작해<br/>
+          <span class="gradient-text">성공으로 완성되는 5단계</span>
+        </h2>
+      </div>
+      <div class="journey-timeline" id="journey-timeline">
+        
+        <div class="journey-step" id="journey-step-1">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <div class="step-icon">📡</div>
+            <div class="step-tag">CATCH</div>
+            <h3 class="step-title">포착</h3>
+            <p class="step-action">길거리 인터뷰 참여</p>
+            <div class="step-detail">
+              밸런스 게임을 통해 당신의 <strong>'잠재력 데이터'</strong>를 추출합니다.
+              일상 속 선택이 모여 천재성의 지표가 됩니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-connector"></div>
+
+        <div class="journey-step" id="journey-step-2">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <div class="step-icon">🏆</div>
+            <div class="step-tag">PROOF</div>
+            <h3 class="step-title">증명</h3>
+            <p class="step-action">임시 결과 확인</p>
+            <div class="step-detail">
+              <strong>"당신은 00형 천재일 확률 89%!"</strong><br/>
+              현장에서 디지털 인증서가 즉시 발급됩니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-connector"></div>
+
+        <div class="journey-step" id="journey-step-3">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <div class="step-icon">📲</div>
+            <div class="step-tag">INFLOW</div>
+            <h3 class="step-title">유입</h3>
+            <p class="step-action">앱 설치 및 회원가입</p>
+            <div class="step-detail">
+              가입 즉시 <strong>10만 원 상당의 '내면 진단 무료 체험권'</strong>이 지급됩니다.
+              진짜 성장의 문이 열립니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-connector"></div>
+
+        <div class="journey-step" id="journey-step-4">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <div class="step-icon">🎓</div>
+            <div class="step-tag">BUILD</div>
+            <h3 class="step-title">육성</h3>
+            <p class="step-action">정밀 컨설팅 & 교육</p>
+            <div class="step-detail">
+              AI 데이터 기반으로 <strong>맞춤형 커리큘럼</strong>이 추천됩니다.
+              나에게 딱 맞는 코치와 매칭됩니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-connector"></div>
+
+        <div class="journey-step" id="journey-step-5">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <div class="step-icon">✨</div>
+            <div class="step-tag">FINISH</div>
+            <h3 class="step-title">완성</h3>
+            <p class="step-action">실제 성과 창출</p>
+            <div class="step-detail">
+              취업, 창업, 자기계발 성공 데이터 공유.
+              <strong>당신의 성장이 다음 누군가의 증거</strong>가 됩니다.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIAL ==================== -->
+  <section class="testimonials section-pad" id="testimonials">
+    <div class="container">
+      <div class="section-label centered">성장 스토리</div>
+      <h2 class="section-title centered">
+        이미 <span class="gradient-text">2,847명</span>이<br/>자신을 발견했습니다
+      </h2>
+      <div class="testimonial-grid" id="testimonial-grid">
+        <div class="testimonial-card" id="test-card-1">
+          <div class="test-quote">"</div>
+          <p>스스로 뭘 잘하는지 몰랐는데, 마이-캐치 리포트를 받고 나서 '결과 중심형 창업가'라는 걸 알게 됐어요. 지금은 작게 창업해서 운영 중입니다.</p>
+          <div class="test-author">
+            <div class="test-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">김</div>
+            <div>
+              <strong>김○○</strong>
+              <span>24세, 창업 성공 · 의류 브랜드 대표</span>
+            </div>
+          </div>
+          <div class="test-badge">천재발굴 1기</div>
+        </div>
+        <div class="testimonial-card testimonial-card--featured" id="test-card-2">
+          <div class="test-quote">"</div>
+          <p>메타-캐치 워크숍에서 내 가치관이 '안정'이 아니라 '자유'였다는 걸 깨달았어요. 공무원 준비를 그만두고 콘텐츠 크리에이터로 전향했는데, 지금이 훨씬 행복합니다.</p>
+          <div class="test-author">
+            <div class="test-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">박</div>
+            <div>
+              <strong>박○○</strong>
+              <span>26세, 콘텐츠 크리에이터 전향</span>
+            </div>
+          </div>
+          <div class="test-badge">메타-캐치 수료</div>
+        </div>
+        <div class="testimonial-card" id="test-card-3">
+          <div class="test-quote">"</div>
+          <p>실패 챌린지가 처음엔 너무 무서웠는데, 거절당하는 게 별거 아니라는 걸 몸으로 배웠어요. 지금은 대기업 영업팀에서 일하고 있고, 거절이 오히려 기회처럼 느껴져요.</p>
+          <div class="test-author">
+            <div class="test-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">이</div>
+            <div>
+              <strong>이○○</strong>
+              <span>23세, 대기업 영업팀 취업</span>
+            </div>
+          </div>
+          <div class="test-badge">프로젝트 RUN 수료</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BUSINESS ==================== -->
+  <section class="business section-pad" id="business">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">BUSINESS SCALE</div>
+        <h2 class="section-title">
+          교육을 넘어<br/>
+          <span class="gradient-text">성장 생태계를 만듭니다</span>
+        </h2>
+      </div>
+      <div class="business-grid" id="business-grid">
+        <div class="biz-card" id="biz-card-1">
+          <div class="biz-icon">🏦</div>
+          <h3>인재 데이터 뱅크</h3>
+          <p>검증된 '성장 의지'와 '내면 역량' 데이터를 기반으로 기업에 인재를 추천하는 <strong>채용 연계형 모델</strong></p>
+          <div class="biz-tag">B2B 채용 서비스</div>
+        </div>
+        <div class="biz-card" id="biz-card-2">
+          <div class="biz-icon">🏋️</div>
+          <h3>구독형 마음 PT</h3>
+          <p>매달 내 마음의 상태와 성장 곡선을 관리해주는 <strong>'마음 PT' 구독 서비스</strong></p>
+          <div class="biz-tag">월간 구독 모델</div>
+        </div>
+        <div class="biz-card" id="biz-card-3">
+          <div class="biz-icon">🏪</div>
+          <h3>오프라인 공간</h3>
+          <p>천재 발굴단 컨셉의 <strong>팝업 스토어</strong> 및 코워킹 스페이스 운영, 굿즈 판매</p>
+          <div class="biz-tag">오프라인 확장</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="contact section-pad" id="contact">
+    <div class="container">
+      <div class="contact-box" id="contact-box">
+        <div class="contact-glow"></div>
+        <div class="section-label centered">무료 체험 신청</div>
+        <h2 class="contact-title">
+          10만 원 상당의<br/>
+          <span class="gradient-text">내면 진단 무료 체험</span>
+        </h2>
+        <p class="contact-desc">
+          지금 신청하면 My-Catch Report 체험권을 바로 드립니다.<br/>
+          당신의 천재성 발굴, 오늘 시작하세요.
+        </p>
+        <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name-input">이름</label>
+              <input type="text" id="name-input" name="name" placeholder="홍길동" required />
+            </div>
+            <div class="form-group">
+              <label for="age-input">나이</label>
+              <input type="number" id="age-input" name="age" placeholder="24" min="18" max="40" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone-input">연락처</label>
+            <input type="tel" id="phone-input" name="phone" placeholder="010-0000-0000" required />
+          </div>
+          <div class="form-group">
+            <label for="interest-input">가장 관심 있는 솔루션</label>
+            <select id="interest-input" name="interest">
+              <option value="">선택해 주세요</option>
+              <option value="report">📊 마이-캐치 리포트</option>
+              <option value="workshop">🧠 메타-캐치 워크숍</option>
+              <option value="run">🏃 천재발굴단 프로젝트 RUN</option>
+              <option value="all">⭐ 전체 프로그램</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dream-input">나의 성장 목표</label>
+            <textarea id="dream-input" name="dream" placeholder="취업, 창업, 자기 발견... 무엇이든 적어주세요" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <span class="btn-text">🎯 무료 체험 신청하기</span>
+            <span class="btn-loading" style="display:none;">신청 중...</span>
+          </button>
+        </form>
+        <div class="form-success" id="form-success" style="display:none;">
+          <div class="success-icon">✅</div>
+          <h3>신청 완료!</h3>
+          <p>빠른 시일 내에 전문 코치가 연락드립니다.<br/>인재캐치중이 포착합니다. 🎯</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon-sm">🪝</div>
+            <span>인재캐치중</span>
+          </div>
+          <p>당신도 몰랐던 당신의 천재성,<br/>인재캐치중이 포착합니다.</p>
+          <div class="footer-social">
+            <a href="#" id="footer-instagram" class="social-btn" aria-label="인스타그램">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" id="footer-youtube" class="social-btn" aria-label="유튜브">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+            </a>
+            <a href="#" id="footer-kakao" class="social-btn" aria-label="카카오">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.125 0H1.875C.839 0 0 .84 0 1.875v20.25C0 23.161.84 24 1.875 24h20.25C23.161 24 24 23.16 24 22.125V1.875C24 .839 23.16 0 22.125 0zM12 18.75c-.591 0-1.17-.041-1.732-.12L6.482 21l1.17-3.996A8.25 8.25 0 1112 18.75z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>솔루션</h4>
+          <ul>
+            <li><a href="#solutions" id="footer-link-1">마이-캐치 리포트</a></li>
+            <li><a href="#solutions" id="footer-link-2">메타-캐치 워크숍</a></li>
+            <li><a href="#solutions" id="footer-link-3">천재발굴단 프로젝트</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>회사</h4>
+          <ul>
+            <li><a href="#about" id="footer-link-4">플랫폼 소개</a></li>
+            <li><a href="#business" id="footer-link-5">비즈니스 모델</a></li>
+            <li><a href="#contact" id="footer-link-6">파트너십 문의</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>문의</h4>
+          <ul>
+            <li><a href="mailto:hello@injae-catch.com" id="footer-email">hello@injae-catch.com</a></li>
+            <li><a href="tel:02-0000-0000" id="footer-phone">02-0000-0000</a></li>
+            <li><span>서울시 강남구 테헤란로</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 인재캐치중. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#" id="footer-privacy">개인정보처리방침</a>
+          <a href="#" id="footer-terms">이용약관</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
